@@ -25,12 +25,10 @@ namespace Oblig5
         private string currentKey;
         private Timer timer = new Timer();
 
-
         public Banken()
         {
             InitializeComponent();
         }
-
 
         private void Banken_Load(object sender, EventArgs e)
         {
@@ -46,7 +44,6 @@ namespace Oblig5
             Kundeliste.Add("07128912345", new Kunder("Freidrich Kemolars", "1234"));
             
         }
-
         private void timedEvent(object sender, EventArgs e)
         {
             tSaldo.Text = Saldo().ToString();
@@ -112,7 +109,6 @@ namespace Oblig5
             }
             return false;
         }
-
         private Kunder FindCustomer(string customer)
         {
             try
@@ -138,7 +134,6 @@ namespace Oblig5
                 bLogout.Enabled = false;
             }
         }
-
         private void ClearAllTextBoxes()
         {
             tUserdisplay.Text = string.Empty;
@@ -162,7 +157,6 @@ namespace Oblig5
                 return true;
             }
         }
-
         public double Saldo()
         {
             return Kundeliste[currentKey].Saldo;
